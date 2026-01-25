@@ -6,7 +6,6 @@ ShowBreadCrumbs: true
 comments: true
 draft: false
 tags: [Raspberry Pi, Python, Ibiza]
-# github: https://github.com/XicuM/infoHotel_demo
 icon: "/projects/infoHotel/icon.png"
 cover: 
     image: "/projects/infoHotel/screenshot.jpg"
