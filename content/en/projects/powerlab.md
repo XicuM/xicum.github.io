@@ -5,6 +5,7 @@ hideMeta: true
 ShowBreadCrumbs: true
 comments: true
 draft: false
+showToc: true
 tags: [Python]
 github: https://github.com/XicuM/PowerLab
 icon: "/projects/powerlab/icon.png"

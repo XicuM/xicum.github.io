@@ -4,6 +4,7 @@ date: 2024-11-10T10:35:33+02:00
 hideMeta: true
 ShowBreadCrumbs: true
 comments: true
+showToc: true
 tags: [Python]
 github: https://github.com/XicuM/snapBack
 icon: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Noto_Emoji_v2.034_1f9e2.svg/240px-Noto_Emoji_v2.034_1f9e2.svg.png

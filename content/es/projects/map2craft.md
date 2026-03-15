@@ -5,6 +5,8 @@ hideMeta: true
 ShowBreadCrumbs: true
 comments: true
 draft: false
+showToc: true
+github: https://github.com/XicuM/map2craft
 tags: ["Minecraft", "Python"]
 icon: "/projects/map2craft/icon.png"
 cover: 

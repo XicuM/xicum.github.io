@@ -9,9 +9,9 @@ disableAnchoredHeadings: true
 
 I'm an **Electronics Engineer** with over 2 years of experience in BCN eMotorsport, the Formula Student team from Barcelona. I specialized in Power Electronics and later took the role of Team Leader. Now I work as a **Research Engineer** at BSC-CNS.
 
-[Download my CV here](cv_XicuMarí.pdf)
+[Download my CV](/cv/cv_XicuMarí.pdf)
 
-## Professional Experience
+## Experience
 
 #### Dec 2024 - Present
 > ### Research Engineer
@@ -20,7 +20,7 @@ I'm an **Electronics Engineer** with over 2 years of experience in BCN eMotorspo
 
 #### Sep 2023 - Sep 2024
 > ### Team Leader
-> {{< icon src=https://media.licdn.com/dms/image/D4D0BAQHS34knFO5mtA/company-logo_200_200/0/1714989313847/bcnemotorsport_logo?e=2147483647&v=beta&t=Skf4vT0b4loxK1MOgUO1eFLyDLIOXSjxifACRiUy07w >}} **BCN eMotorsport** · Universitat Politècnica de Catalunya 
+> {{< icon src=https://media.licdn.com/dms/image/v2/D4D0BAQHS34knFO5mtA/company-logo_200_200/company-logo_200_200/0/1714989313847/bcnemotorsport_logo?e=1775088000&v=beta&t=EnMnWpxkNgzvDuDJLw5vS1FtfnntdXEBJfo1JsQE49I >}} **BCN eMotorsport** · Universitat Politècnica de Catalunya 
 > - Led and coordinated departments in a Formula Student team focused on designing, manufacturing and testing an electric, driverless car.
 > - Managed team organization, documentation software, event planning, budgeting, and sponsorship agreements.
 > 
@@ -28,10 +28,9 @@ I'm an **Electronics Engineer** with over 2 years of experience in BCN eMotorspo
 
 #### Feb 2022 - Sep 2024
 > ### Power Electronics Engineer
-> {{< icon src=https://media.licdn.com/dms/image/D4D0BAQHS34knFO5mtA/company-logo_200_200/0/1714989313847/bcnemotorsport_logo?e=2147483647&v=beta&t=Skf4vT0b4loxK1MOgUO1eFLyDLIOXSjxifACRiUy07w >}} **BCN eMotorsport** · Universitat Politècnica de Catalunya 
-> - Modeled and simulated control algorithms for permanent magnet drives.
-> - Programmed embedded SoC with FPGA for three-phase inverter control.
-> - Worked on lithium cell behavior to enhance battery performance.
+> {{< icon src=https://media.licdn.com/dms/image/v2/D4D0BAQHS34knFO5mtA/company-logo_200_200/company-logo_200_200/0/1714989313847/bcnemotorsport_logo?e=1775088000&v=beta&t=EnMnWpxkNgzvDuDJLw5vS1FtfnntdXEBJfo1JsQE49I >}} **BCN eMotorsport** · Universitat Politècnica de Catalunya 
+> - Implemented and validated real-time Field Oriented Control (FOC) utilizing a FPGA-based solution directed to optimize the powertrain performance. Check more details [here](/en/projects/tfg).
+> - Analyzed the behavior of lithium battery cells to optimize the reliability of our single-seater.
 
 #### Feb 2022 - Jul 2022
 > ### Software Engineer Trainee
@@ -52,16 +51,14 @@ I'm an **Electronics Engineer** with over 2 years of experience in BCN eMotorspo
 #### Sep 2022 - Jun 2025
 > ### 📃 Master's Degree in Electronic Engineering
 > **Universitat Politècnica de Catalunya** \
-> Barcelona School of Telecommunications Engineering \
-> *Overall grade: 8.87 / 10*
+> Barcelona School of Telecommunications Engineering
+> - Overall grade: 9.12/10.
+> - Master's thesis (10/10 with honors): [*Integrating the Tensor Marshaling Unit for Sparse Tensor Algebra with a RISC-V processor*](https://upcommons.upc.edu/entities/publication/ff37709a-e04b-4c4b-8167-eef1cb51e36c)"
 
 #### Sep 2018 - Jun 2022
 > ### 📃 B.Sc. in Electronic Engineering and Telecommunications
 > **Universitat Politècnica de Catalunya** \
-> Barcelona School of Telecommunications Engineering \
-> *Overall grade: 9.15 / 10 (first in class)*
+> Barcelona School of Telecommunications Engineering
+> - Graduated 1st of Promotion (GPA: 9.15/10). 18 subjects with honors.
+> - Bachelor's thesis: [*FPGA Implementation of a Field Oriented Control with Field Weakening for IPMSM motors*](https://upcommons.upc.edu/entities/publication/e0c3d271-9cb1-4701-8694-2017d88d29c6)."
 <!-- TODO: Fotos de la graduación y trabajo final -->
-
-## Technical Skills
-
-`C/C++` `Python` `Pandas` `Matlab` `Simulink` `VHDL` `SystemVerilog` `KiCad` `Altium` `Xilinx Vivado` `Altera Quartus II` `Cadence Virtuoso` `Linux` `ROS1` `Notion` `Wordpress` `Adobe inDesign` `Microsoft Office` `Google Drive`

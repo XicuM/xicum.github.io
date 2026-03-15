@@ -3,6 +3,7 @@ title: Reelary
 date: 2025-12-25T09:05:03+01:00
 hideMeta: true
 ShowBreadCrumbs: true
+showToc: true
 tags: [Flutter, Instagram, Gemini API]
 github: https://github.com/XicuM/Reelary
 icon: "/projects/reelary/icon.png"

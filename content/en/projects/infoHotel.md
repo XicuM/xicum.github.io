@@ -4,6 +4,7 @@ date: 2024-10-14T00:06:49+02:00
 hideMeta: true
 ShowBreadCrumbs: true
 comments: true
+showToc: true
 draft: false
 tags: [Raspberry Pi, Python, Ibiza]
 icon: "/projects/infoHotel/icon.png"

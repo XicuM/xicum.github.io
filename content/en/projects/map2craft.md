@@ -4,8 +4,10 @@ date: 2026-01-25T00:00:00+00:00
 hideMeta: true
 ShowBreadCrumbs: true
 comments: true
+showToc: true
 draft: false
 tags: ["Minecraft", "Python"]
+github: https://github.com/XicuM/map2craft
 icon: "/projects/map2craft/icon.png"
 cover: 
     image: "/projects/map2craft/cover.png"
