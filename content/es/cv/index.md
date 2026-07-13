@@ -17,12 +17,12 @@ Descarga mi CV aquí:
 
 #### Dec 2024 - Present
 > ### Research Engineer
-> {{< icon src=https://media.licdn.com/dms/image/v2/D4D0BAQFDFKag3YkiCQ/company-logo_200_200/company-logo_200_200/0/1719838820411/barcelona_supercomputing_center_logo?e=2147483647&v=beta&t=NPQZEzF-Ms39XlNV02ahQtz1oqmA0mDDluLixrZOicA >}} **Barcelona Supercomputing Center** · Barcelona
+> {{< icon src=/cv/bsc_logo.png >}} **Barcelona Supercomputing Center** · Barcelona
 > - Implementación de aceleradores de acceso-ejecución desacoplados en OpenPiton, un marco de procesador many-core.
 
 #### Sep 2023 - Sep 2024
 > ### Team Leader
-> {{< icon src=https://media.licdn.com/dms/image/v2/D4D0BAQHS34knFO5mtA/company-logo_200_200/company-logo_200_200/0/1714989313847/bcnemotorsport_logo?e=1775088000&v=beta&t=EnMnWpxkNgzvDuDJLw5vS1FtfnntdXEBJfo1JsQE49I >}} **BCN eMotorsport** · Universitat Politècnica de Catalunya 
+> {{< icon src=/cv/bcnemotorsport_logo.jpeg >}} **BCN eMotorsport** · Universitat Politècnica de Catalunya 
 > - Liderazgo y coordinación de departamentos en un equipo de Formula Student enfocado en diseñar, fabricar y probar un coche eléctrico y autónomo.
 > - Gestión de la organización del equipo, el software de documentación, la planificación de eventos, el presupuesto y los acuerdos de patrocinio.
 > 
@@ -30,13 +30,13 @@ Descarga mi CV aquí:
 
 #### Feb 2022 - Sep 2024
 > ### Ingeniero de Electrónica de Potencia
-> {{< icon src=https://media.licdn.com/dms/image/v2/D4D0BAQHS34knFO5mtA/company-logo_200_200/company-logo_200_200/0/1714989313847/bcnemotorsport_logo?e=1775088000&v=beta&t=EnMnWpxkNgzvDuDJLw5vS1FtfnntdXEBJfo1JsQE49I >}} **BCN eMotorsport** · Universitat Politècnica de Catalunya 
+> {{< icon src=/cv/bcnemotorsport_logo.jpeg >}} **BCN eMotorsport** · Universitat Politècnica de Catalunya 
 > - Implementé e integré una Tensor Marshaling Unit, un acelerador novedoso de acceso-ejecución desacoplado, en el framework many-core OpenPiton. [Aquí](/es/projects/tfg) lo explico con más detalle.
 > - Obtuve una mejora geométrica de 1.66x en la multiplicación SpMV (Sparse Matrix-Vector) mediante hardware-software co-design.
 
 #### Feb 2022 - Jul 2022
 > ### Becario de Ingeniería de Software Embebido
-> {{< icon src=https://media.licdn.com/dms/image/v2/D4D0BAQGDDzVGaxwVVQ/company-logo_200_200/company-logo_200_200/0/1719903468616/premium_psu_logo?e=2147483647&v=beta&t=kxm3dLahJ7phU674QrdVNoH_rfTQiFGDwXI64WunZiY >}} **Premium PSU** · L'Hospitalet de Llobregat
+> {{< icon src=/cv/premium_logo.jpg >}} **Premium PSU** · L'Hospitalet de Llobregat
 > - Programación de firmware y scripting de automatización para cargadores de vehículos eléctricos en el equipo Floox de Premium PSU.
 
 #### Jun 2016 - Sep 2016 &nbsp; | &nbsp; Jun 2017 - Sep 2017

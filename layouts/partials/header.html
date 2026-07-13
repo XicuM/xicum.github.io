@@ -189,10 +189,10 @@
                         {{- $target = index . 0 }}
                     {{- end }}
                     <li>
-                        <a href="{{- $target.Permalink -}}" title="{{ $target.Language.Params.languageAltTitle | default ($target.Language.LanguageName | emojify) | default ($target.Lang | title) }}"
-                            aria-label="{{ $target.Language.LanguageName | default ($target.Lang | title) }}">
-                            {{- if (and site.Params.displayFullLangName ($target.Language.LanguageName)) }}
-                            {{- $target.Language.LanguageName | emojify -}}
+                        <a href="{{- $target.Permalink -}}" title="{{ $target.Language.Params.languageAltTitle | default ($target.Language.Label | emojify) | default ($target.Lang | title) }}"
+                            aria-label="{{ $target.Language.Label | default ($target.Lang | title) }}">
+                            {{- if (and site.Params.displayFullLangName ($target.Language.Label)) }}
+                            {{- $target.Language.Label | emojify -}}
                             {{- else }}
                             {{- $target.Lang | title -}}
                             {{- end -}}

@@ -3,6 +3,7 @@ title: Cómo programar presentaciones con Marp
 date: 2024-11-25T10:35:33+02:00
 comments: true
 showToc: true
+tags: [Markdown]
 cover:
    image: posts/marp/cover.jpg
 ---
@@ -16,7 +17,6 @@ La sintaxis sencilla de Markdown lo ha hecho popular entre escritores y desarrol
 
 En Marp, el enfoque se centra en el contenido, escribiéndolo en texto plano con comandos básicos de Markdown, sin la distracción de herramientas de diseño complejas.
 
-
 ## Cómo instalar y usar Marp
 
 Hay varias formas de instalar y usar Marp. La que yo uso es la extensión de Marp para Visual Studio Code. Esta extensión te permite crear, previsualizar y exportar presentaciones de Marp directamente sin salir del editor de VS Code.
@@ -27,17 +27,18 @@ Para instalar la extensión de Marp, sigue estos pasos:
 2. Ve a la vista de Extensiones y busca "Marp" en el cuadro de búsqueda de Extensiones.
 3. Haz clic en el botón "Instalar" para instalar la extensión.
 
-{{< figure src="https://marp.app/assets/marp-for-vs-code.png" width=575px align=center >}}
-
+{{< figure src="<https://marp.app/assets/marp-for-vs-code.png>" width=575px align=center >}}
 
 ## Cuatro simples pasos para crear una presentación con Marp
 
 Comencemos con un ejemplo simple para mostrarte lo fácil que es crear una presentación con Marp, enfocándonos por el momento solo en el contenido.
 
 ### 1. Crear el archivo Markdown
+
 Una vez que la extensión esté instalada, puedes comenzar a crear presentaciones de Marp iniciando un nuevo archivo Markdown. Puedes hacerlo creando un nuevo archivo con la extensión `.md`. Si es la primera vez que usas Visual Studio Code, te pedirá que instales las extensiones recomendadas para el resaltado y previsualización de Markdown, para que puedas identificar fácilmente títulos, enlaces y otras características de la sintaxis de Markdown.
 
 ### 2. Habilitar Marp y comenzar a escribir
+
 Para habilitar Marp en el archivo Markdown, necesitas agregar `marp: true` al principio del archivo, envuelto en tres guiones. Luego, puedes comenzar a escribir tu presentación usando Markdown. [Esta guía](https://www.markdownguide.org/basic-syntax/) proporciona una explicación detallada de la sintaxis básica. Se podría comenzar, por ejemplo, con el siguiente código:
 
 ```markdown
@@ -119,7 +120,7 @@ Por otro lado, puedes crear un fondo dividido con la siguiente sintaxis:
 ![bg left](/ruta/a/la/imagen.jpg)
 ```
 
-{{< figure src=https://marpit.marp.app/assets/image-syntax/split-background.jpg align=center width=300px >}}
+{{< figure src=<https://marpit.marp.app/assets/image-syntax/split-background.jpg> align=center width=300px >}}
 
 Esto establecerá la imagen como fondo de la mitad izquierda de la diapositiva. También puedes usar `bg right` para establecer la imagen como fondo de la mitad derecha de la diapositiva. Para especificar el tamaño, agrega el porcentaje después de las palabras clave, por ejemplo, `bg right:33%`.
 
@@ -136,7 +137,7 @@ marp: true
 theme: gaia
 ```
 
-{{< figure src=https://files.speakerdeck.com/presentations/3f84f66126ed45f88640b2e557942c4e/slide_2.jpg align=center width=300px >}}
+{{< figure src=<https://files.speakerdeck.com/presentations/3f84f66126ed45f88640b2e557942c4e/slide_2.jpg> align=center width=300px >}}
 
 ### Usar un tema externo
 
@@ -153,6 +154,7 @@ Luego, debes agregar la directiva `theme` en el preámbulo, seguida del nombre d
 ### Usar mi tema personalizado
 
 #### Descargar y activar el tema
+
 He creado un tema minimalista que puedes usar en tus presentaciones. Puedes descargar el archivo CSS desde aquí y agregar el siguiente preámbulo a tu archivo Markdown:
 
 ```yaml
@@ -178,11 +180,13 @@ El tema también admite el uso de un logo. Se agrega a la presentación pegando 
 El logo se mostrará en la esquina superior izquierda de las diapositivas. Es posible que necesites ajustar la posición del encabezado si la relación de aspecto del logo es diferente a la predeterminada.
 
 #### Clases personalizadas
+
 Además de las clases incorporadas por defecto en Marp, puedes crear clases personalizadas para aplicar a las diapositivas. Si deseas aplicar una clase personalizada globalmente, puedes agregar la directiva `class` en el preámbulo, seguida del nombre de la clase. De lo contrario, puedes agregar la directiva `_class` en la diapositiva a la que deseas aplicar la clase.
 
 En el archivo CSS de mi tema, he definido algunas clases personalizadas para invertir el esquema de colores y crear columnas. Aquí puedes encontrar dos ejemplos:
 
 - Para invertir el esquema de colores, usa la directiva `_class: invert`.
+
    ```markdown
    ## Diapositiva 1
    <!-- _class: invert -->
@@ -190,6 +194,7 @@ En el archivo CSS de mi tema, he definido algunas clases personalizadas para inv
    ```
 
 - Para crear dos columnas, usa la directiva `_class: col2`. Puedes crear hasta 4 columnas usando `col3` y `col4`. Cada columna está separada por un encabezado H3 (`###`).
+
    ```markdown
    ## Diapositiva 2
    <!-- _class: col2 -->
@@ -200,9 +205,11 @@ En el archivo CSS de mi tema, he definido algunas clases personalizadas para inv
    ```
 
 #### Ejemplo
+
 A modo de ejemplo, he recreado esta publicación (en inglés) usando mi tema personalizado. Puedes descargar el código fuente accediendo a [este enlace](/post/marp/marp_tutorial.md). El resultado se muestra a continuación:
 
 {{< adobepdf url="/posts/marp/marp_tutorial.pdf" height="480px" name="Tutorial de Marp" >}}
 
 ## Conclusión
+
 Si has llegado hasta aquí, estás listo para comenzar a crear presentaciones hermosas con Marp. ¡Disfruta! 🚀
