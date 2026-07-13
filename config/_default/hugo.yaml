@@ -49,7 +49,7 @@ params:
   ShareButtons: ["x", "linkedin", "whatsapp", "reddit", "telegram", "facebook"]
 
   # Adobe PDF Viewer
-  adobeClientId: "5e4106dab71f4a17bcabc294a0a8a637"
+  adobeClientId: "c4583510809e4f3f99df0bf2ad4eab15"
 
   # Favicons
   assets:

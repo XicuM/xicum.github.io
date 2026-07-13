@@ -5,51 +5,48 @@
 {{- $height := .Get "height" | default ("600px") -}}
 {{- $id := printf "pdf-%04d" $.Ordinal -}}
 
-<!-- Adobe PDF Embed API -->
-<script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
-
 <div id="{{ $id }}" style="width: {{ $width }}; height: {{ $height }}; background: var(--entry); border-radius: 8px; margin: 1rem 0;"></div>
 
 <script type="text/javascript">
-  document.addEventListener("adobe_dc_view_sdk.ready", function(){
-    try {
-      var adobeDCView = new AdobeDC.View({
-        clientId: "{{ site.Params.adobeClientId }}",
-        divId: "{{ $id }}"
-      });
-      adobeDCView.previewFile({
-        content: {
-          location: { url: "{{ $url }}" }
-        },
-        metaData: {
-          fileName: "{{ $name }}"
-        }
-      }, {
-        embedMode: "{{ $embedMode }}",
-        defaultViewMode: "FIT_WIDTH"
-      });
-    } catch (error) {
-      console.error("Error loading PDF viewer:", error);
-      document.getElementById("{{ $id }}").innerHTML = `
-        <div style="padding: 1rem; color: var(--secondary);">
-          <p>Error loading PDF. Please check the console for more details.</p>
-          <p><a href="{{ $url }}" target="_blank">Open PDF in new tab</a></p>
-        </div>`;
-    }
-  });
+  (function() {
+    var container = document.getElementById("{{ $id }}");
+    var fallbackUrl = "{{ $url }}";
+    var fallbackHtml = '<div style="padding: 1rem; color: var(--secondary);"><p>Failed to load PDF viewer. <a href="' + fallbackUrl + '" target="_blank">Open PDF in new tab</a></p></div>';
 
-  // Fallback in case the event listener doesn't fire
-  setTimeout(function() {
-    if (typeof AdobeDC === 'undefined') {
-      console.error("AdobeDC is not defined. Make sure the Adobe PDF Embed API script is loaded.");
-      var container = document.getElementById("{{ $id }}");
-      if (container) {
-        container.innerHTML = `
-          <div style="padding: 1rem; color: var(--secondary);">
-            <p>Failed to load PDF viewer. Please try refreshing the page.</p>
-            <p><a href="{{ $url }}" target="_blank">Open PDF in new tab</a></p>
-          </div>`;
+    function initPdf() {
+      try {
+        var adobeDCView = new AdobeDC.View({
+          clientId: "{{ site.Params.adobeClientId }}",
+          divId: "{{ $id }}"
+        });
+        adobeDCView.previewFile({
+          content: { location: { url: fallbackUrl } },
+          metaData: { fileName: "{{ $name }}" }
+        }, {
+          embedMode: "{{ $embedMode }}",
+          defaultViewMode: "FIT_WIDTH"
+        });
+      } catch (error) {
+        console.error("Error loading PDF viewer:", error);
+        container.innerHTML = fallbackHtml;
       }
     }
-  }, 5000);
+
+    var started = false;
+    function start() {
+      if (!started) { started = true; initPdf(); }
+    }
+
+    if (window.AdobeDC) {
+      start();
+    } else {
+      document.addEventListener("adobe_dc_view_sdk.ready", start, { once: true });
+      setTimeout(function() {
+        if (!started) {
+          console.error("Adobe PDF Embed API failed to load.");
+          container.innerHTML = fallbackHtml;
+        }
+      }, 8000);
+    }
+  })();
 </script>
