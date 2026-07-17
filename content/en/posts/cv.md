@@ -137,14 +137,36 @@ This command tells Pandoc to:
 2. Use `cv.tex` as the template.
 3. Produce a PDF with `pdflatex`.
 
-## 5. Taking it Further: Automation
+## 5. The full tool
 
-You can automatize the generation process using a build system like **Makefile** or **Scons**, or keep it simple with a shell script. This way you can add more complex logic, like generating different versions of your CV for different job applications or support multiple languages.
+Now that you know how this solution works under the hood, it's time to introduce `cv-cli`, a command-line tool available in the following public repository:
 
----
+👉 [https://github.com/XicuM/cv-cli](https://github.com/XicuM/cv-cli)
 
-I have shared my full repository, including a more advanced template and automated scripts, on GitHub: 
+To use this utility, you must first install it. Download the source code from the repository and open a terminal from the main code directory. Once there, run:
 
-👉 [https://github.com/XicuM/cv](https://github.com/XicuM/cv)
+```bash
+pip install --user -e .
+```
+
+Once installed, you can start using it. The main commands are:
+
+```bash
+cv init               # Initialize project with templates to fill in
+cv cv -l en           # Create a CV in English
+cv letter acme -l en  # Create a letter in English for the company "acme"
+cv template cv        # Edit the CV template
+cv build              # Build the entire project
+cv build -t cv -l en  # Build only the CV in English
+cv clean              # Clean the project cache
+```
+
+If you try `cv init` and then `cv build`, an `output` folder will be generated with the following documents:
+
+| cv-en.pdf | template-en.pdf |
+| --- | --- |
+| ![](/posts/cv/cv-en.png) | ![](/posts/cv/letter-en.png) |
+
+With that, you'll have a professional CV in hand! From here, you just need to tweak the LaTeX file to your preferred style once and update the .yaml file whenever you finish a professional stage.
 
 Happy crafting! If you run into any issues with Pandoc or LaTeX environments, feel free to drop a comment below.

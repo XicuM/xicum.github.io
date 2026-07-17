@@ -9,21 +9,25 @@ cover:
     image: /posts/cv/cover.png
 ---
 
-Muchas veces, cuando me pongo a actualizar mi currículum, acabo pasando más tiempo peleándome con el formato que haciendo la pequeña modificación que quería. Frustrado por esto, pensé que debería haber una forma más rápida de gestionar este proceso. ¿La solución? Separar el contenido del formato. Esto significa tener un archivo que contenga la información personal y otro archivo que defina su estilo. Este problema se resuelve elegantemente con LaTeX, una herramienta muy utilizada en el mundo académico para la preparación de documentos.
+Muchas veces, cuando queiero actualizar mi currículum, acabo pasando más tiempo peleándome con el formato que haciendo la pequeña modificación que quería. Frustrado por esto, pensé que debería haber una forma más rápida de hacerlo. 
 
-En este artículo, utilizaremos LaTeX y Pandoc para ofrecer una forma sencilla de generar un CV profesional a partir de datos. De esta manera, el contenido del CV se almacena en un formato estructurado (YAML) y el diseño se gestiona mediante una plantilla de LaTeX. Cada vez que necesites actualizar tu CV, solo tendrás que modificar el archivo YAML y regenerar el PDF.
+Una buena solución a este problema consiste en separar el contenido del formato. Esto significa tener un archivo que contenga la información personal y otro archivo que defina su estilo. De esta manera, únicamente debes modificar la información personal, puesto que el estilo se mantiene.
 
-## El flujo de trabajo
+Para construir una solución basada en esta idea, me fijé en LaTex, una herramienta muy utilizada para la preparacipapers y libros. Para facilitar la introducción de datos en Latex desde una plantilla, la herramienta más adecuada es Pandoc.  
 
-La arquitectura es sencilla. Pandoc lee tus datos de un archivo YAML y utiliza una plantilla de LaTeX para darle formato en un PDF:
+Así, uniendo LaTeX y Pandoc, es posible ofrecer una forma sencilla de generar un CV profesional a partir de una plantilla sencilla. Cada vez que necesites actualizar tu CV, solo tendrás que modificar el archivo YAML y regenerar el PDF. 
 
-**YAML** *(Los Datos)* + **LaTeX** *(La Plantilla)* → **Pandoc** *(El Motor)* → **PDF** *(El Resultado)*
+La arquitectura de esta solución es sencilla. Pandoc lee tus datos de un archivo YAML, que es un formato estructurado fácil de aprender y similar a JSON. Una vez obtenidos los datos, Pandoc los injecta en el archivo LaTeX con el estilo que queremos y genera el PDF a partir de él:
 
-Aquí te explico cómo configurarlo paso a paso.
+**YAML** *(Los Datos)* + **LaTeX** *(El estilo)* → **Pandoc** *(El Motor)* → **PDF** *(El Resultado)*
+
+---
+
+A continuación te explico cómo crear un currículum profesional en 5 simples pasos:
 
 ## 1. Requisitos previos
 
-Necesitarás tener instaladas dos herramientas principales en tu sistema:
+Necesitarás tener instaladas las dos herramientas principales en tu sistema:
 - **Pandoc**, el "convertidor universal de documentos". Puedes leer las instrucciones de instalación [aquí](https://pandoc.org/installing.html).
 - **Distribución TeX** que proporciona el motor para renderizar PDFs. Las opciones recomendadas son:
   - Windows: [MiKTeX](https://miktex.org/download)
@@ -137,14 +141,36 @@ Este comando le indica a Pandoc que:
 2. Use `cv.tex` como plantilla.
 3. Genere un PDF mediante `pdflatex`.
 
-## 5. Un paso más: Automatización
+## 5. La herramienta completa
 
-Puedes automatizar el proceso de generación utilizando un sistema de construcción como Makefile o Scons, o simplemente con un script de shell. De esta forma, puedes añadir una lógica más compleja, como generar diferentes versiones de tu CV para distintas ofertas de empleo o dar soporte a varios idiomas.
+Estos cuatro pasos pueden ser automatizados para reducir la fricción. Como ahora ya sabes cómo funciona esta solución por dentro, es momento de prentarte a `cv-cli`, una herramientas de comandos de terminal disponible en el siguiente repositorio público:
 
----
+👉 [https://github.com/XicuM/cv-cli](https://github.com/XicuM/cv-cli)
 
-He compartido mi repositorio completo, que incluye una plantilla más avanzada y scripts automatizados, en GitHub:
+Para usar esta utilidad, debes primero instalarla. Descarga el código fuente del repositorio y abre una terminal desde el directorio principal del código. Una vez allí, ejecuta:
 
-👉 [https://github.com/XicuM/cv](https://github.com/XicuM/cv)
+```bash
+pip install --user -e .
+```
 
-¡Espero que te sirva de ayuda! Si tienes algún problema con Pandoc o LaTeX, no dudes en dejar un comentario abajo.
+Una vez instalado, ya podrás usarlo. Los comandos principales son los siguientes:
+
+```bash
+cv init               # Inicia el projecto con las plantillas para rellenar
+cv cv -l en           # Crea un CV en Inglés
+cv letter acme -l es  # Crea una carta en Español para la empresa "acme"
+cv template cv        # Edita la plantilla del CV
+cv build              # Construye todo el proyecto
+cv build -t cv -l en  # Construye solo el CV en Inglés
+cv clean              # Limpia la cache del proyecto
+```
+
+Si pruebas con `cv init` y posteriormente con `cv build`, se generará una carpeta llamada `output` con los siguientes documentos:
+
+| cv-en.pdf | template-en.pdf |
+| --- | --- |
+| ![](/posts/cv/cv-en.png) | ![](/posts/cv/letter-en.png) |
+
+¡Con esto ya tendrás un Currícum Vitae profesional en mano! A partir de aquí, solo tendrás que ajustar el archivo LaTex al estilo que más te guste una sola vez y actualizar el archivo .yaml cada vez que termines una etapa profesional.
+
+Si tienes algún problema con Pandoc o LaTeX, o con la herramienta `cv-cli`, no dudes en dejar un comentario abajo. ¡Te leo!
